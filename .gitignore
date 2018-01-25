@@ -5,3 +5,4 @@
 *.dll
 *.zip
 
+/.vs/Template/v15/Server/sqlite3

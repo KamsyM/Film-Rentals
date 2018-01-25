@@ -1,5 +1,6 @@
 ﻿using NakedObjects;
 
+
 namespace Template.Model
 {
     public class Student
