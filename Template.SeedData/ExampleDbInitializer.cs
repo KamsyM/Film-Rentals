@@ -12,14 +12,14 @@ namespace Template.SeedData
         protected override void Seed(ExampleDbContext context)
         {
             this.Context = context;
-            AddNewStudent("Alie Algol");
-            AddNewStudent("Forrest Fortran");
-            AddNewStudent("James Java");
+            AddNewFilm("Alie Algol");
+            AddNewFilm("Forrest Fortran");
+            AddNewFilm("James Java");
         }
 
-        private void AddNewStudent(string name)
+        private void AddNewFilm(string name)
         {
-            var st = new Student() { FullName = name };
+            var st = new Film() { FilmName = name };
             Context.Students.Add(st);
         }
     }
