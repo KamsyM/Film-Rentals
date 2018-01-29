@@ -6,3 +6,4 @@
 *.zip
 
 /.vs/Template/v15/Server/sqlite3
+/Template.DataBase/FilmRentalsDbContext.cs
