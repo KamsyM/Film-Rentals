@@ -59,8 +59,8 @@
   <ItemGroup>
     <Compile Include="Customer.cs" />
     <Compile Include="CustomerService.cs" />
-    <Compile Include="Student.cs" />
-    <Compile Include="ExampleService.cs" />
+    <Compile Include="Film.cs" />
+    <Compile Include="FilmService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
