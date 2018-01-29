@@ -8,8 +8,10 @@ namespace Template.Model
 {
     public class Customer
     {
+        virtual public int ID { get; set; }
         virtual public string F_name { get; set; }
         virtual public string L_name { get; set; }
+        virtual public DateTime DOB { get; set; }
 
     }
 }
