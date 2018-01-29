@@ -20,7 +20,13 @@ namespace Template.SeedData
         private void AddNewFilm(string name)
         {
             var st = new Film() { FilmName = name };
-            Context.Students.Add(st);
+            Context.Films.Add(st);
+        }
+
+        private void AddNewCustomer(string FirstName, string LastName)
+        {
+            var st = new Customer() { F_name = FirstName, L_name = LastName };
+            Context.Customers.Add(st);
         }
     }
 }

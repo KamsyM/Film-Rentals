@@ -2,6 +2,8 @@
 using System;
 using System.Linq;
 using System.Collections.Generic;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Template.Model
 {
@@ -19,7 +21,7 @@ namespace Template.Model
 
 		public virtual DateTime YearOfRelease { get; set; }
 
-		public virtual double Prize { get; set; }
+		public virtual double Price { get; set; }
 
 		public virtual int AgeRating { get; set; }
 	}
