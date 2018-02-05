@@ -24,6 +24,6 @@ namespace Template.Model
 
 		public virtual int AgeRating { get; set; }
 
-		public virtual List<Rental> Rentals { get; set; }
+		
 	}
 }
