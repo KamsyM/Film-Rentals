@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NakedObjects;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,10 +9,14 @@ namespace Template.Model
 {
     public class Customer
     {
-        virtual public int ID { get; set; }
+        [NakedObjectsIgnore]
+        virtual public int CustomerId { get; set; }
+
+        [Title]
         virtual public string F_name { get; set; }
         virtual public string L_name { get; set; }
         virtual public DateTime DOB { get; set; }
+ 
 
     }
 }
