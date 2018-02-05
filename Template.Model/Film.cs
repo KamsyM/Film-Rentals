@@ -1,6 +1,5 @@
 ﻿using NakedObjects;
 using System;
-using System.Linq;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,5 +23,7 @@ namespace Template.Model
 		public virtual double Price { get; set; }
 
 		public virtual int AgeRating { get; set; }
+
+		public virtual List<Rental> Rentals { get; set; }
 	}
 }
