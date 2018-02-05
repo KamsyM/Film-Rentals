@@ -20,7 +20,7 @@ namespace Template.SeedData
         private void AddNewFilm(string name)
         {
             var st = new Film() { FilmName = name };
-            Context.Students.Add(st);
+            Context.Films.Add(st);
         }
     }
 }
