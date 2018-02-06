@@ -7,7 +7,7 @@ using Template.Model;
 
 namespace Template.SeedData
 {
-    public class ExampleDbInitializer : DropCreateDatabaseAlways<ExampleDbContext>
+    public class ExampleDbInitializer : DropCreateDatabaseIfModelChanges<ExampleDbContext> //DropCreateDatabaseAlways
     {
         private ExampleDbContext Context;
         protected override void Seed(ExampleDbContext context)

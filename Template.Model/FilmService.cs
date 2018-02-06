@@ -24,6 +24,11 @@ namespace Template.Model
         {
             return AllFilms().Where(c => c.FilmName.ToUpper().Contains(name.ToUpper()));
         }
+
+        public IQueryable<Film> FindFilmByCategory(Categories category)
+        {
+            return AllFilms().Where(c => c.Category==category);
+        }
     }
 
 }
