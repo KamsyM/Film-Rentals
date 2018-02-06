@@ -39,5 +39,8 @@ namespace Template.Model
 
         [Disabled][Hidden(WhenTo.UntilPersisted)]
 		virtual public DateTime DateOfExpire { get; set; }
+
+		[Disabled][Hidden(WhenTo.UntilPersisted)]
+		public virtual RentalStatus Status { get { return DateOfExpire < DateTime.Today ? RentalStatus.Expired : RentalStatus.NotExpired; } }
 	}
 }
