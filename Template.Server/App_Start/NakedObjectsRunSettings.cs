@@ -48,7 +48,7 @@ namespace NakedObjects.Template {
             get
             {
                 return new Type[] {
-                    typeof(FilmService), typeof(CustomerService)
+                    typeof(FilmService), typeof(CustomerService), typeof(RentalService)
                 };
             }
         }
@@ -69,7 +69,8 @@ namespace NakedObjects.Template {
         {
             return new IMenu[] {
                 factory.NewMenu<FilmService>(true, "Films"),
-                factory.NewMenu<CustomerService>(true, "Customers")
+                factory.NewMenu<CustomerService>(true, "Customers"),
+                factory.NewMenu<RentalService>(true, "Rentals")
             };
         }
     }

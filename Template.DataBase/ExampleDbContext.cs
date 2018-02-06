@@ -13,5 +13,6 @@ namespace Template.DataBase
 
         public DbSet<Film> Films { get; set; }
         public DbSet<Customer> Customers { get; set; }
+        public DbSet<Rental> Rentals { get; set; }
     }
 }

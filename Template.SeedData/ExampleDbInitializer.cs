@@ -28,5 +28,11 @@ namespace Template.SeedData
             var st = new Customer() { F_name = FirstName, L_name = LastName };
             Context.Customers.Add(st);
         }
+
+        private void AddNewRental(Film name)
+        {
+            var st = new Rental() { FilmOfRental = name };
+            Context.Rentals.Add(st);
+        }
     }
 }
