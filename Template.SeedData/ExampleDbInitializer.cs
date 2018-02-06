@@ -7,7 +7,7 @@ using Template.Model;
 
 namespace Template.SeedData
 {
-    public class ExampleDbInitializer : DropCreateDatabaseAlways<ExampleDbContext>
+    public class ExampleDbInitializer : DropCreateDatabaseIfModelChanges<ExampleDbContext> //DropCreateDatabaseAlways
     {
         private ExampleDbContext Context;
         protected override void Seed(ExampleDbContext context)
@@ -18,7 +18,7 @@ namespace Template.SeedData
             AddNewCustomer("James", "Java", new DateTime(2000,02,16));
         }
 
-        private void AddNewFilm(string name, Categories category, string filmmaker, int yearofrelease, double price, int agerating)
+        private void AddNewFilm(string name, Categories category, string filmmaker, DateTime yearofrelease, double price, int agerating)
         {
             var st = new Film() { FilmName = name , Category = category, FilmMaker = filmmaker, YearOfRelease = yearofrelease, Price = price, AgeRating = agerating};
             Context.Films.Add(st);

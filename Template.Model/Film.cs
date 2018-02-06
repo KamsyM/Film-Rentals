@@ -23,7 +23,7 @@ namespace Template.Model
 
 		public virtual string FilmMaker { get; set; }
 
-		public virtual int YearOfRelease { get; set; }
+		public virtual DateTime YearOfRelease { get; set; }
 
         [Mask("c")]
 		public virtual double Price { get; set; }
