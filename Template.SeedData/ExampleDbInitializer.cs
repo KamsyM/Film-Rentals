@@ -25,13 +25,13 @@ namespace Template.SeedData
 
         private void AddNewCustomer(string FirstName, string LastName)
         {
-            var st = new Customer() { F_name = FirstName, L_name = LastName };
+            var st = new Customer() { FirstName = FirstName, LastName = LastName };
             Context.Customers.Add(st);
         }
 
         private void AddNewRental(Film name)
         {
-            var st = new Rental() { FilmOfRental = name };
+            var st = new Rental() { Film = name };
             Context.Rentals.Add(st);
         }
     }

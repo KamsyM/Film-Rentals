@@ -19,13 +19,13 @@ namespace Template.Model
 
 		public virtual string Category { get; set; }
 
+		public virtual int AgeRating { get; set; }
+
 		public virtual string FilmMaker { get; set; }
 
 		public virtual int YearOfRelease { get; set; }
 
 		public virtual double Price { get; set; }
-
-		public virtual int AgeRating { get; set; }
 
 		private ICollection<Rental> filmRentals = new List<Rental>();
 
@@ -44,7 +44,7 @@ namespace Template.Model
 		public Rental CreateNewRental()
 		{
 			var rental = Container.NewTransientInstance<Rental>();
-			rental.FilmOfRental = this;
+			rental.Film = this;
 			return rental;
 		}
 	}

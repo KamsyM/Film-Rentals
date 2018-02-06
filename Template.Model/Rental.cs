@@ -21,14 +21,14 @@ namespace Template.Model
         virtual public int RentalID { get; set; }
 
         [Title]
-		virtual public Film FilmOfRental { get; set; }
+		virtual public Film Film { get; set; }
 
         public IQueryable<Film> AutoCompleteFilm(string matching)
         {
             return Container.Instances<Film>();
         }
 
-        virtual public Customer CustomerOfRental { get; set; }
+        virtual public Customer Customer { get; set; }
 
         public IQueryable<Customer> AutoCompleteCustomer(string matching)
         {
@@ -37,7 +37,7 @@ namespace Template.Model
 
         virtual public DateTime DateOfRental { get; set; }
 
-        [Disabled]
+        [Disabled][Hidden(WhenTo.UntilPersisted)]
 		virtual public DateTime DateOfExpire { get; set; }
 	}
 }
