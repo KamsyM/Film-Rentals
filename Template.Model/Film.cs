@@ -23,9 +23,9 @@ namespace Template.Model
 
 		public virtual string FilmMaker { get; set; }
 
-		public virtual int YearOfRelease { get; set; }
+		public virtual DateTime DateOfRelease { get; set; }
 
-        [Mask("c")]
+		[Mask("c")]
 		public virtual double Price { get; set; }
 
 		private ICollection<Rental> filmRentals = new List<Rental>();
