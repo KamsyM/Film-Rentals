@@ -29,6 +29,20 @@ namespace Template.Model
         {
             return AllFilms().Where(c => c.Category==category);
         }
-    }
 
+		public IQueryable<Film> FindFilmByYearOfRelease(int year)
+		{
+			return AllFilms().Where(c => c.DateOfRelease.Year==year);
+		}
+
+		public IQueryable<Film> FindFilmByAgeRating(AgeRating ageRating)
+		{
+			return AllFilms().Where(c => c.AgeRating == ageRating);
+		}
+
+		public IQueryable<Film> FindFilmByFilmMaker(string filmMaker)
+		{
+			return AllFilms().Where(c => c.FilmMaker.ToUpper().Contains(filmMaker.ToUpper()));
+		}
+	}
 }

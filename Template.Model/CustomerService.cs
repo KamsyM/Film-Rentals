@@ -15,23 +15,22 @@ namespace Template.Model
         #endregion
         public Customer CreateNewCustomer()
         {
-            //'Transient' means 'unsaved' -  returned to the user
-            //for fields to be filled-in and the object saved.
             return Container.NewTransientInstance<Customer>();
         }
 
         public IQueryable<Customer> AllCustomers()
         {
-            //The 'Container' masks all the complexities of 
-            //dealing with the database directly.
             return Container.Instances<Customer>();
         }
 
         public IQueryable<Customer> FindCustomerByName(string name)
         {
-            //Filters students to find a match
             return AllCustomers().Where(c => c.FirstName.ToUpper().Contains(name.ToUpper()) || c.LastName.ToUpper().Contains(name.ToUpper()));
         }
-    }
 
+		public IQueryable<Customer> FindFilmByYearOfBirth(int year)
+		{
+			return AllCustomers().Where(c => c.DateOfBirth.Year == year);
+		}
+	}
 }
