@@ -18,9 +18,9 @@ namespace Template.SeedData
             AddNewCustomer("James", "Java", new DateTime(2000,02,16));
 		}
 
-        private void AddNewFilm(string name, Categories category, string filmmaker, DateTime yearofrelease, double price, int agerating)
+        private void AddNewFilm(string name, Categories category, string filmmaker, DateTime dateofrelease, double price, int agerating)
         {
-            var st = new Film() { FilmName = name , Category = category, FilmMaker = filmmaker, DateOfRelease = yearofrelease, Price = price, AgeRating = agerating};
+            var st = new Film() { FilmName = name , Category = category, FilmMaker = filmmaker, DateOfRelease = dateofrelease, Price = price, AgeRating = agerating};
             Context.Films.Add(st);
             Context.SaveChanges();
         }
