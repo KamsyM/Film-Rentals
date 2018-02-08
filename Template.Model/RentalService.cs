@@ -1,5 +1,6 @@
 ﻿using NakedObjects;
 using System.Linq;
+using System;
 
 namespace Template.Model
 {
@@ -31,7 +32,7 @@ namespace Template.Model
 
 		public IQueryable<Rental> FindRentalByRentalStatus(RentalStatus status)
 		{
-            
+			return AllRentals().Where(c => status==RentalStatus.Expired ? c.DateOfExpire < DateTime.Today : c.DateOfExpire > DateTime.Today);
 		}
 	}
 }
