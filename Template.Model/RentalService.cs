@@ -1,9 +1,5 @@
 ﻿using NakedObjects;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Template.Model
 {
@@ -22,5 +18,20 @@ namespace Template.Model
         {
             return Container.Instances<Rental>();
         }
-    }
+
+		public IQueryable<Rental> FindRentalByCustomerName(string name)
+		{
+			return AllRentals().Where(c => c.Customer.FirstName.ToUpper().Contains(name.ToUpper()) || c.Customer.LastName.ToUpper().Contains(name.ToUpper()));
+		}
+
+		public IQueryable<Rental> FindRentalByFilmName(string name)
+		{
+			return AllRentals().Where(c => c.Film.FilmName.ToUpper().Contains(name.ToUpper()));
+		}
+
+		public IQueryable<Rental> FindRentalByRentalStatus(RentalStatus status)
+		{
+			return AllRentals().Where(c => c.Status==status);
+		}
+	}
 }

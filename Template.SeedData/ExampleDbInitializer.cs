@@ -35,9 +35,9 @@ namespace Template.SeedData
             Context.SaveChanges();
         }
 
-        private void AddNewRental(Film name, Customer customerofrental, DateTime dateofrental)
+        private void AddNewRental(Film film, Customer customer, DateTime dateOfRental)
         {
-            var st = new Rental() { Film = name, Customer = customerofrental, DateOfRental = dateofrental};
+            var st = new Rental() { Film = film, Customer = customer, DateOfRental = dateOfRental};
             Context.Rentals.Add(st);
             Context.SaveChanges();
         }

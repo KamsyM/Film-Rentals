@@ -30,7 +30,7 @@ namespace Template.Model
         public IQueryable<Customer> FindCustomerByName(string name)
         {
             //Filters students to find a match
-            return AllCustomers().Where(c => c.FirstName.ToUpper().Contains(name.ToUpper()) || c.FirstName.ToUpper().Contains(name.ToUpper()));
+            return AllCustomers().Where(c => c.FirstName.ToUpper().Contains(name.ToUpper()) || c.LastName.ToUpper().Contains(name.ToUpper()));
         }
     }
 
