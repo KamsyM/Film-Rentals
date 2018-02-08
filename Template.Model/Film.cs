@@ -19,7 +19,7 @@ namespace Template.Model
 
 		public virtual Categories Category { get; set; }
 
-		public virtual int AgeRating { get; set; }
+		public virtual AgeRating AgeRating { get; set; }
 
 		public virtual string FilmMaker { get; set; }
 
