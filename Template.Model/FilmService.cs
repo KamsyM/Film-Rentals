@@ -44,5 +44,12 @@ namespace Template.Model
 		{
 			return AllFilms().Where(c => c.FilmMaker.ToUpper().Contains(filmMaker.ToUpper()));
 		}
+
+		public IQueryable<Film> FindFilmByPrice(PriceComparator compare, double cost)
+		{
+			return PriceComparator.Equal==compare ? AllFilms().Where(c => c.Price==cost)
+				: PriceComparator.Higher == compare ? AllFilms().Where(c => c.Price>cost) :
+				AllFilms().Where(c => c.Price<cost);
+		}
 	}
 }

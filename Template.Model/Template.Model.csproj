@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="AgeRating.cs" />
     <Compile Include="Categories.cs" />
+    <Compile Include="PriceComparator.cs" />
     <Compile Include="Rental.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="CustomerService.cs" />
