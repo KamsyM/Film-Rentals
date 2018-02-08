@@ -31,7 +31,7 @@ namespace Template.Model
 
 		public IQueryable<Rental> FindRentalByRentalStatus(RentalStatus status)
 		{
-			return AllRentals().Where(c => c.Status==status);
+            
 		}
 	}
 }
