@@ -42,7 +42,7 @@ namespace Template.Model
 			}
 		}
 
-		public Rental CreateNewRental()
+        public Rental CreateNewRental()
 		{
 			var rental = Container.NewTransientInstance<Rental>();
 			rental.Film = this;
