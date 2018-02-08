@@ -1,7 +1,6 @@
 ﻿using NakedObjects;
 using System.Linq;
 
-
 namespace Template.Model
 {
     public class FilmService
@@ -47,9 +46,9 @@ namespace Template.Model
 
 		public IQueryable<Film> FindFilmByPrice(PriceComparator compare, double cost)
 		{
-			return PriceComparator.Equal==compare ? AllFilms().Where(c => c.Price==cost)
-				: PriceComparator.Higher == compare ? AllFilms().Where(c => c.Price>cost) :
-				AllFilms().Where(c => c.Price<cost);
+			return PriceComparator.Equal == compare ? AllFilms().Where(c => c.Price==cost)
+				: PriceComparator.HigherThan == compare ? AllFilms().Where(c => c.Price>cost)
+				: AllFilms().Where(c => c.Price<cost);
 		}
 	}
 }

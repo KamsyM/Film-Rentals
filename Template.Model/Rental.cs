@@ -17,6 +17,7 @@ namespace Template.Model
             DateOfExpire = DateOfRental.AddDays(7);
         }
         #endregion
+
         [NakedObjectsIgnore]
         virtual public int RentalID { get; set; }
 
