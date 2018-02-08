@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Template.Model
 {
-    public enum Categories
-    {
-        Action, Adventure, Comedy, Drama, Fantasy, Horror, Romance, ScienceFiction
-    }
+	public enum AgeRating
+	{
+		G, PG, PG13, R, NC17
+	}
 }
