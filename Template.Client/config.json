@@ -2,11 +2,13 @@
   "authenticate": false,
   "authClientId": "5xMMFaiZ8lnBTRZexsDcooZAfbP1IJB8",
   "authDomain": "nakedobjectsdemo.eu.auth0.com",
-  "applicationName" : "Student Records",
+  "applicationName" : "Film Rentals",
   "appPath": "http://localhost:5000/",
   "colors": {
     "typeMap": {
-      "Template.Model.Student": 1
+      "Template.Model.Film": 1,
+      "Template.Model.Customer": 2,
+      "Template.Model.Rental": 3
     }
   },
   "masks": {
